@@ -18,7 +18,8 @@ jobs:
 
     - name: Download and extract Amulet
       run: |
-        wget https://www.amulet.xyz/latest/amulet.zip
+        # wget https://www.amulet.xyz/latest/amulet.zip
+        wget https://github.com/ianmaclarty/amulet/releases/download/v1.21.10/amulet-v1.21.10-linux.zip -O amulet.zip
         unzip amulet.zip -d amulet
         rm amulet.zip
 
