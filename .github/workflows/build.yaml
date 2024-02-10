@@ -1,0 +1,27 @@
+# This should be an action instead of the .devcontainer setup? I think?
+name: Build and Export Amulet Game
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip libgl1-mesa-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libasound2-dev
+
+    - name: Download and extract Amulet
+      run: |
+        wget https://www.amulet.xyz/latest/amulet.zip
+        unzip amulet.zip -d amulet
+        rm amulet.zip
+
+    - name: Build and export game
+      run: |
+        ./amulet/bin/amulet export main.lua game.zip
