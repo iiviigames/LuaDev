@@ -1,0 +1,6 @@
+[
+  {
+    "key": "ctrl+k ctrl+c",
+    "command": "editor.action.commentLine"
+  }
+]
