@@ -1,0 +1,28 @@
+{
+  "name": "Amulet Dev Container",
+  "dockerFile": "Dockerfile",
+  "extensions": [
+    "github.copilot",
+    "akamud.vscode-theme-onedark",
+    "sumneko.lua",
+    "yinfei.luahelper",
+    "JanW.love-launcher",
+    "bschulte.love",
+    "PollywogGames.pico8-ls",
+    "Grumpydev.pico8vscodeeditor",
+    "PictElm.pico8code",
+    "johob.pico8-vscode"
+  ],
+  "settings": { 
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.fontFamily": "'Fira Code', monospace",
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    "editor.rulers": [2, 8, 72, 80],
+    "workbench.keybindings": "./devcontainer/keybindings.json",
+  }
+}
