@@ -27,10 +27,9 @@ jobs:
         cd ..
         rmdir amulet-v1.21.10
         rm amulet.zip
-        cd amulet
-        chmod +x amulet.sh
-        cd ..
+        chmod +x ./amulet/amulet.sh
+        
 
     - name: Build and export game
       run: |
-        ../../amulet/amulet export main.lua game.zip
+        ./amulet export main.lua game.zip
