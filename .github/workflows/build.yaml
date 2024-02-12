@@ -31,8 +31,11 @@ jobs:
         rmdir amulet-v1.21.10
         rm amulet.zip
         chmod +x ./amulet/amulet.sh
-        
+
+    - name: Show Location
+      run: |
+        ls
 
     - name: Build and export game
       run: |
-        ./amulet/amulet export ../main.lua game.zip
+        ./amulet/amulet export ./main.lua game.zip
