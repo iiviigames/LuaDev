@@ -1,9 +1,12 @@
-# 💻Lua Development with *Codespaces*
+# 💻Lua Development with *Actions*, *Codespaces*, and *Dockerfiles*
+
+[![Build and Export Amulet Game](https://github.com/iiviigames/LuaDev/actions/workflows/build.yaml/badge.svg)](https://github.com/iiviigames/LuaDev/actions/workflows/build.yaml)
 
 This will run:
-- [Lua]()
-- [Amulet]()
-- [and hopefully PICO-8]()
+- [Lua](https://lua.org)
+- [Amulet](https://www.amulet.xyz/)
+- [Love2D](https://love2d.org/wiki/Main_Page)
+- [and hopefully PICO-8](https://lexaloffle.com/pico-8.php)
 
 ## `devcontainer` and Codespaces
 
@@ -28,6 +31,14 @@ end
       <ul>
         <li>Added this Readme</li>
         <li><b>TODO:</b> Add links</li>
+      </ul>
+    </span>
+    <span align="right"><h3>February 11, 2024</h3></span>
+    <span align="left">
+      <ul>
+        <li>Updated this Readme</li>
+        <li>Got the Build Amulet Action <b>and</b> the Codespace working!</li>
+        <li><b>TODO:</b> Run amulet games with web version in vscode browser!</li>
       </ul>
     </span>
   </blockquote>
