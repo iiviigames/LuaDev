@@ -13,8 +13,13 @@ RUN apt-get update && apt-get install -y \
     libasound2-dev
 
 # Download and extract Amulet
-RUN wget https://www.amulet.xyz/latest/amulet.zip && \
-    unzip amulet.zip -d /amulet && \
+RUN wget -O amulet.zip https://github.com/ianmaclarty/amulet/releases/download/v1.21.10/amulet-v1.21.10-linux.zip && \
+    unzip amulet.zip && \
+    mkdir amulet && \
+    cd amulet-v1.21.10 && \
+    mv * ../amulet && \
+    cd .. && \
+    rmdir amulet-v1.21.10 && \\
     rm amulet.zip
 
 # Add Amulet binaries to PATH
