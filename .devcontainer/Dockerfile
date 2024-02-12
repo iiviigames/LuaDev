@@ -19,7 +19,7 @@ RUN wget -O amulet.zip https://github.com/ianmaclarty/amulet/releases/download/v
     cd amulet-v1.21.10 && \
     mv * ../amulet && \
     cd .. && \
-    rmdir amulet-v1.21.10 && \\
+    rmdir amulet-v1.21.10 && \
     rm amulet.zip
 
 # Add Amulet binaries to PATH
