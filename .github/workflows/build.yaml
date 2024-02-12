@@ -20,9 +20,17 @@ jobs:
       run: |
         # wget https://www.amulet.xyz/latest/amulet.zip
         wget https://github.com/ianmaclarty/amulet/releases/download/v1.21.10/amulet-v1.21.10-linux.zip -O amulet.zip
-        unzip amulet.zip -d amulet
+        unzip amulet.zip
+        mkdir amulet
+        cd amulet-v1.21.10
+        mv * ../amulet
+        cd ..
+        rmdir amulet-v1.21.10
         rm amulet.zip
+        cd amulet
+        chmod +x amulet.sh
+        cd ..
 
     - name: Build and export game
       run: |
-        ./amulet/bin/amulet export main.lua game.zip
+        ../../amulet/amulet export main.lua game.zip
