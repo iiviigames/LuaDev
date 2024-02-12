@@ -16,11 +16,14 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y wget unzip libgl1-mesa-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libasound2-dev
 
-    - name: Download and extract Amulet
+    - name: Download Amulet
       run: |
         # wget https://www.amulet.xyz/latest/amulet.zip
         wget https://github.com/ianmaclarty/amulet/releases/download/v1.21.10/amulet-v1.21.10-linux.zip -O amulet.zip
-        unzip amulet.zip
+
+    - name: Unzip and Repair Structure
+      run: |
+        unzip ./amulet.zip
         mkdir amulet
         cd amulet-v1.21.10
         mv * ../amulet
@@ -32,4 +35,4 @@ jobs:
 
     - name: Build and export game
       run: |
-        ./amulet export main.lua game.zip
+        ./amulet/amulet export main.lua game.zip
